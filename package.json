@@ -1,0 +1,20 @@
+{
+  "name": "Random stuff generator",
+  "productName": "Random stuff generator",
+  "version": "1.0.0",
+  "description": "Random stuff generator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Wojtas",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^28.2.4",
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "toastify": "^2.0.1"
+  }
+}

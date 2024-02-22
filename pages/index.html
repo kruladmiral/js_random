@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="generator.js" defer></script>
+    <title>Random Generator</title>
+  </head>
+<body>
+
+  <h1>Hello, dear User!</h1>
+  <p>Here you can generate:</p>
+  <div class="buttonsDiv">
+    <button onclick="showForm('emails')" class="menuButton" type="button">Emails</button>
+    <button onclick="showForm('names')" class="menuButton" type="button">Names</button>
+    <button onclick="showForm('places')" class="menuButton"  type="button" onclick>Places</button>
+    <button onclick="showForm('texts')" class="menuButton"  type="button">Texts</button></a>
+    <button onclick="showForm('passwords')"class="menuButton" type="button">Passwords</button></a>
+  </div>
+
+    <form id="places" class="hidden">
+      <div>
+        <body>Select places:
+          <button onclick="returnFake('countries')" type="button">Countries</button>
+          <button onclick="returnFake('cities')" type="button">Cities</button>
+          <button onclick="returnFake('street')" type="button">Street</button>
+          </body>
+      </div>
+      </form>
+      <form id="names" class="hidden">
+          <div class="buttonsDiv">
+            <button onclick="generateName(document.getElementById('sex').checked)" type="button">Name</button>
+            <button onclick="returnFake('surnames')" type="button">Surname</button>
+            <button onclick="generateFullName(document.getElementById('sex').checked)" type="button">Full Name</button>
+            </div>
+            <div class="radioButtonsDiv"> 
+            <input type="radio" id="sex" name="sexbutton" value="female" checked>
+            <label for="sex">Female</label><br> 
+            <input type="radio" id="sex2" name="sexbutton" value="male">
+            <label for="sex2">Male</label><br></div>
+        </div>
+        </form>
+      </form>
+      <form id="emails" class="hidden">
+        <div><center>Select email type</center></div>
+        <button onclick="returnFake('nameEmail')" type = "button">Random Email</button>
+        <button onclick="fakeDomain(document.getElementById('domain').value)" type = "button">With user's domain</button>
+        <button onclick="useName(document.getElementById('input').value)" type = "button">Use user's name</button>
+        <div>
+            <label for="fname">Use User's domain name:</label><br>
+            <input type="text" id="domain" name="domain"><br>
+            <label for="fname">User's name:</label><br>
+            <input type="text" id="input" name="input"><br>
+        </div>
+        </form>
+        <form id="texts" class="hidden">
+          <div>
+            Select type of text
+            <button onclick="returnFake('word')" type="button">Word</button>
+            <button onclick="returnFake('paragraph')" type="button">Paragraph</button>
+            <button onclick="returnFake('adjective')" type="button">Adjective</button>
+          </div>
+          </form>
+          <form id="passwords" class="hidden">
+           <div>
+              <input type="checkbox" id="specialchars" name="checkbox1" value="checked" >
+              <label for="checkbox1"> Has a special character</label><br>
+              <input type="checkbox" id="uppercase" name="checkbox2" >
+              <label for="checkbox2"> Has an uppercase letter</label><br>
+              <input type="checkbox" id="number" name="checkbox3" >
+              <label for="checkbox3"> Has a number</label><br>
+             </div>
+                <label for="lenght">Type in desired lenght (8-24):</label><br>
+                <input type="number" id="password-lenght" name="lenght"><br>
+                <button onclick="createPassword(Number(document.getElementById('password-lenght').value))" type="button">Generate password</button>
+            </form>
+            
+
+  
+  <div class="myDiv"><label for="freeform">Your generated items:</label>
+    <br>
+    
+    <textarea id="result" name="freeform" rows="20" cols="50" readonly="true">
+    </textarea></div>
+    <div>
+      <button id="clear-button" onclick="clearElement('result')">Clear</button>
+      <button id="copy-button" onclick="copy()">Copy All</button>
+    </div>
+    
+  </body>
+
+</html>
