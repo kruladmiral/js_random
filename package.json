@@ -12,9 +12,5 @@
   "dependencies": {
     "electron": "^28.2.4",
     "faker": "^5.5.3"
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
-    "toastify": "^2.0.1"
   }
 }
