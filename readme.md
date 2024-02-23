@@ -27,10 +27,10 @@ The application let user generate some random stuff. Currently there are impleme
 - Places
     The user can generate countries, cities and random street names by clicking on corresponding buttons.
 
--Words
+- Words
     Here pressing the 'Word' button will generate random word of random length. To generate more text user has to use 'Paragraph' option. It will output few sentences of giberish that resemble a real language. Clicking 'Adjective' button returns a random adjective. 
 
--Passwords
+- Passwords
     There are following options to choose while creating password. Checking 'Has a special character', will ensure that password generated will contain some special characters. Checking 'Has an uppercase letter' will generate password with a capital letter at the start and checking 'Has a number' will add a number at the end of password. User can use any combination of options. 
     To create a password user has to type in desired password length in provided input field. At the moment application supports passwords of length between 7 and 25 characters. 
 
