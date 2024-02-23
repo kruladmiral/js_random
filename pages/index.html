@@ -16,33 +16,34 @@
     <title>Random Generator</title>
   </head>
 <body>
-
   <h1>Hello, dear User!</h1>
   <p>Here you can generate:</p>
-  <div class="buttonsDiv">
-    <button onclick="showForm('emails')" class="menuButton" type="button">Emails</button>
-    <button onclick="showForm('names')" class="menuButton" type="button">Names</button>
-    <button onclick="showForm('places')" class="menuButton"  type="button" onclick>Places</button>
-    <button onclick="showForm('texts')" class="menuButton"  type="button">Texts</button></a>
-    <button onclick="showForm('passwords')"class="menuButton" type="button">Passwords</button></a>
+  <div class="buttons-div">
+    <button onclick="showForm('emails')" class="menu-button" type="button">Emails</button>
+    <button onclick="showForm('names')" class="menu-button" type="button">Names</button>
+    <button onclick="showForm('places')" class="menu-button"  type="button" onclick>Places</button>
+    <button onclick="showForm('texts')" class="menu-button"  type="button">Texts</button></a>
+    <button onclick="showForm('passwords')"class="menu-button" type="button">Passwords</button></a>
   </div>
 
     <form id="places" class="hidden">
-      <div>
-        <body>Select places:
-          <button onclick="returnFake('countries')" type="button">Countries</button>
-          <button onclick="returnFake('cities')" type="button">Cities</button>
-          <button onclick="returnFake('street')" type="button">Street</button>
-          </body>
+      <h2> Select places:</h2>
+      <div class="places-div">
+      
+          <button onclick="returnFake('countries')" type="button" class="sub-button">Countries</button>
+          <button onclick="returnFake('cities')" type="button" class="sub-button">Cities</button>
+          <button onclick="returnFake('street')" type="button" class="sub-button">Street</button>
+          
       </div>
       </form>
-      <form id="names" class="hidden">
-          <div class="buttonsDiv">
-            <button onclick="generateName(document.getElementById('sex').checked)" type="button">Name</button>
-            <button onclick="returnFake('surnames')" type="button">Surname</button>
-            <button onclick="generateFullName(document.getElementById('sex').checked)" type="button">Full Name</button>
+      <form id="names" class="hidden sub-form" >
+        <h2>Select gender and generate name or full name:</h2>
+          <div class="names-div">
+            <button onclick="generateName(document.getElementById('sex').checked)" type="button" class="sub-button">Name</button>
+            <button onclick="returnFake('surnames')" type="button" class="sub-button">Surname</button>
+            <button onclick="generateFullName(document.getElementById('sex').checked)" type="button" class="sub-button">Full Name</button>
             </div>
-            <div class="radioButtonsDiv"> 
+            <div class="radio-buttons-div"> 
             <input type="radio" id="sex" name="sexbutton" value="female" checked>
             <label for="sex">Female</label><br> 
             <input type="radio" id="sex2" name="sexbutton" value="male">
@@ -50,11 +51,11 @@
         </div>
         </form>
       </form>
-      <form id="emails" class="hidden">
-        <div><center>Select email type</center></div>
-        <button onclick="returnFake('nameEmail')" type = "button">Random Email</button>
-        <button onclick="fakeDomain(document.getElementById('domain').value)" type = "button">With user's domain</button>
-        <button onclick="useName(document.getElementById('input').value)" type = "button">Use user's name</button>
+      <form id="emails" class="hidden sub-form">
+        <h2>Select email type:</center></h2>
+        <button onclick="returnFake('nameEmail')" type = "button" class="sub-button">Random Email</button>
+        <button onclick="fakeDomain(document.getElementById('domain').value)" type = "button" class="sub-button">With user's domain</button>
+        <button onclick="useName(document.getElementById('input').value)" type = "button" class="sub-button">Use user's name</button>
         <div>
             <label for="fname">Use User's domain name:</label><br>
             <input type="text" id="domain" name="domain"><br>
@@ -62,38 +63,39 @@
             <input type="text" id="input" name="input"><br>
         </div>
         </form>
-        <form id="texts" class="hidden">
-          <div>
-            Select type of text
-            <button onclick="returnFake('word')" type="button">Word</button>
-            <button onclick="returnFake('paragraph')" type="button">Paragraph</button>
-            <button onclick="returnFake('adjective')" type="button">Adjective</button>
+        <form id="texts" class="hidden sub-form">
+          <h2>Select type of text:</h2>
+          <div class="texts-div">
+            <button onclick="returnFake('word')" type="button" class="sub-button">Word</button>
+            <button onclick="returnFake('paragraph')" type="button" class="sub-button">Paragraph</button>
+            <button onclick="returnFake('adjective')" type="button" class="sub-button">Adjective</button>
           </div>
           </form>
-          <form id="passwords" class="hidden">
-           <div>
+          <form id="passwords" class="hidden sub-form">
+            <h2>Select options for generated password:</h2>
+          <div class="checkbox-div">
               <input type="checkbox" id="specialchars" name="checkbox1" value="checked" >
               <label for="checkbox1"> Has a special character</label><br>
               <input type="checkbox" id="uppercase" name="checkbox2" >
               <label for="checkbox2"> Has an uppercase letter</label><br>
               <input type="checkbox" id="number" name="checkbox3" >
               <label for="checkbox3"> Has a number</label><br>
-             </div>
+            </div>
                 <label for="lenght">Type in desired lenght (8-24):</label><br>
                 <input type="number" id="password-lenght" name="lenght"><br>
-                <button onclick="createPassword(Number(document.getElementById('password-lenght').value))" type="button">Generate password</button>
+                <button onclick="createPassword(Number(document.getElementById('password-lenght').value))" type="button" class="sub-button">Generate password</button>
             </form>
             
 
   
-  <div class="myDiv"><label for="freeform">Your generated items:</label>
+  <div class="my-div"><label for="freeform">Your generated items:</label>
     <br>
     
-    <textarea id="result" name="freeform" rows="20" cols="50" readonly="true">
+    <textarea id="result" name="freeform" rows="20" cols="50" readonly="true" >
     </textarea></div>
-    <div>
-      <button id="clear-button" onclick="clearElement('result')">Clear</button>
-      <button id="copy-button" onclick="copy()">Copy All</button>
+    <div class="functional-buttons-div">
+      <button id="clear-button" onclick="clearElement('result')" class="functional-button">Clear</button>
+      <button id="copy-button" onclick="copy()" class="functional-button">Copy All</button>
     </div>
     
   </body>

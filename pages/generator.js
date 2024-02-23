@@ -2,11 +2,11 @@
 
 // forms
 function hideAll() {
-document.getElementById("places").style.display="none";
-document.getElementById("names").style.display="none";
-document.getElementById("emails").style.display="none";
-document.getElementById("texts").style.display="none";
-document.getElementById("passwords").style.display="none";
+    document.getElementById("places").style.display="none";
+    document.getElementById("names").style.display="none";
+    document.getElementById("emails").style.display="none";
+    document.getElementById("texts").style.display="none";
+    document.getElementById("passwords").style.display="none";
 }
 function showForm(form) {
     hideAll();
@@ -55,12 +55,11 @@ const passwordLenght = a;
 }
 
 function generatePassword (passwordLenght, specialChars, upperCase, numbers) {
-    let random = Math.floor(Math.random() * 4) + 2;
-    let word  = faker.adjective(passwordLenght - random);
+    let word  = faker.words(passwordLenght - 3);
     let wordArray = word.split('');
     
     if (specialChars === true) {
-        for (let i = word.length; i < passwordLenght; i ++) {
+        for (let i = wordArray.length; i < passwordLenght - 1; i ++) {
         const chars = ['!', '@', '#', '$', '%', '^', '&', '*', '?'];
         wordArray.push(chars[selectRandomChar()]);
         }
@@ -81,7 +80,7 @@ function generatePassword (passwordLenght, specialChars, upperCase, numbers) {
     }
     
     function selectRandomChar () {
-        let random = Math.floor(Math.random() * 9);
+        let random = Math.floor(Math.random() * 8);
         return random;
     }
     

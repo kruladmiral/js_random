@@ -5,6 +5,7 @@ contextBridge.exposeInMainWorld('faker', {
     countries: () => {return faker.location.country()},
     cities: () => {return faker.location.city()},
     street: () => {return faker.location.street()},
+    words: (lenght) => {return faker.word.noun(lenght)},
     word: () => {return faker.word.noun('any-length')},
     paragraph: () => {return faker.lorem.paragraph()},
     adjective: () => {return faker.word.adjective()},
