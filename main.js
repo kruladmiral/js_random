@@ -53,8 +53,10 @@ function createAboutWindow() {
     const aboutWindow = new BrowserWindow({
         title: 'About',
         width: 300,
-        height: 300
+        height: 300,
+        resizable: false
     });
+    
     aboutWindow.loadFile(path.join(__dirname,'./pages/about.html'));
 }
 
