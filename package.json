@@ -9,8 +9,8 @@
   },
   "author": "Wojtas",
   "license": "MIT",
-  "dependencies": {
-    "electron": "^28.2.4",
-    "faker": "^5.5.3"
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "electron": "^29.0.1"
   }
 }
